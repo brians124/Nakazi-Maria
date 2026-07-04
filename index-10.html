@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nakazi Maria — Nursery Teacher &amp; Blogger</title>
+<meta name="description" content="Nakazi Maria is a nursery school teacher sharing teaching tips, parenting advice, and real classroom stories for parents and fellow educators.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23F2802E'/%3E%3Cstop offset='100%25' stop-color='%23E8467C'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Ctext x='50' y='66' font-size='52' font-family='Georgia,serif' font-weight='700' fill='white' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink: #E8467C;
+    --pink-deep: #B32F5C;
+    --orange: #F2802E;
+    --orange-deep: #C85E15;
+    --white: #FFFFFF;
+    --peach: #FFF1E9;
+    --cocoa: #3A2419;
+    --radius: 16px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin: 0;
+    background: var(--white);
+    color: var(--cocoa);
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  a{ color: inherit; text-decoration: none; }
+  :focus-visible{ outline: 3px solid var(--pink-deep); outline-offset: 3px; }
+
+  h1, h2, h3{ font-family: 'Fraunces', serif; font-weight: 600; margin: 0; }
+
+  .eyebrow{
+    font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--orange-deep);
+  }
+
+  .mark{ position: relative; white-space: nowrap; }
+  .mark::after{
+    content: ""; position: absolute; left: -2px; right: -2px; bottom: 0.05em;
+    height: 0.35em; background: linear-gradient(90deg, var(--orange) 0%, var(--pink) 100%);
+    opacity: 0.35; z-index: -1; border-radius: 3px;
+  }
+
+  /* ---------- NAV ---------- */
+  .site-nav{
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem; padding: 1.2rem 5%;
+    background: var(--white); border-bottom: 1px solid #F4DCE4;
+    position: sticky; top: 0; z-index: 10;
+  }
+  .brand{ font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.35rem; color: var(--pink-deep); }
+  .brand span{ color: var(--orange-deep); }
+  .nav-links{ display: flex; gap: 1.6rem; list-style: none; padding: 0; margin: 0; font-weight: 600; font-size: 0.95rem; }
+  .nav-links a{ padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: border-color 0.2s ease, color 0.2s ease; }
+  .nav-links a:hover{ border-color: var(--orange); color: var(--pink-deep); }
+
+  /* ---------- BANDS ---------- */
+  .band{ padding: 4.5rem 5%; }
+  .band-white{ background: var(--white); }
+  .band-peach{ background: var(--peach); }
+  .band-pink{ background: var(--pink); color: var(--white); }
+  .band-orange{ background: var(--orange); color: var(--white); }
+  .band-pink h1, .band-pink h2, .band-orange h1, .band-orange h2{ color: var(--white); }
+
+  .wrap{ max-width: 980px; margin: 0 auto; }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center;
+    max-width: 1080px; margin: 0 auto; padding: 4rem 5% 3rem;
+  }
+  @media (max-width: 760px){ .hero{ grid-template-columns: 1fr; padding-top: 2.5rem; } }
+  .hero h1{ font-size: clamp(2.1rem, 5vw, 3.2rem); line-height: 1.15; margin: 0.6rem 0 1rem; }
+  .hero p{ font-size: 1.08rem; color: #6B4433; max-width: 34rem; }
+
+  .hero-portrait{
+    aspect-ratio: 1; border-radius: 50%; background: linear-gradient(160deg, var(--orange), var(--pink));
+    display: flex; align-items: center; justify-content: center;
+    max-width: 300px; margin: 0 auto; padding: 6px;
+    box-shadow: 0 16px 32px -10px rgba(179,47,92,0.35);
+  }
+  .hero-portrait img{
+    width: 100%; height: 100%; border-radius: 50%; object-fit: cover;
+    border: 4px solid var(--white);
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn{ display: inline-block; font-weight: 700; font-size: 0.95rem; padding: 0.8rem 1.6rem; border-radius: 999px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .btn-primary{ background: var(--pink-deep); color: var(--white); }
+  .btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 8px 18px -6px rgba(179,47,92,0.5); }
+  .btn-outline{ border: 2px solid var(--white); color: var(--white); }
+  .btn-outline:hover{ background: var(--white); color: var(--pink-deep); }
+  .btn-ghost{ border: 2px solid var(--pink-deep); color: var(--pink-deep); }
+  .btn-ghost:hover{ background: var(--pink-deep); color: var(--white); }
+  .btn-row{ display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.6rem; }
+
+  /* ---------- CARDS ---------- */
+  .grid{ display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.8rem; margin-top: 2.5rem; }
+  .card{ background: var(--white); border-radius: var(--radius); padding: 1.6rem; box-shadow: 0 10px 24px -12px rgba(58,36,25,0.18); position: relative; }
+  .card::before{ content: ""; position: absolute; top: 0; left: 1.4rem; width: 40px; height: 6px; background: var(--orange); border-radius: 0 0 4px 4px; }
+  .card .tag{ font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--pink-deep); background: var(--peach); padding: 0.2rem 0.65rem; border-radius: 999px; }
+  .card h3{ font-size: 1.15rem; margin: 0.8rem 0 0.5rem; }
+  .card p{ font-size: 0.95rem; color: #6B4433; margin: 0 0 0.9rem; }
+  .card .read-more{ font-weight: 700; font-size: 0.9rem; color: var(--orange-deep); background: none; border: none; cursor: pointer; padding: 0; font-family: 'Work Sans', sans-serif; }
+  .card .full-text{ display: none; font-size: 0.95rem; color: #6B4433; margin: -0.4rem 0 0.9rem; }
+  .card.open .full-text{ display: block; }
+  .card.open .excerpt{ display: none; }
+
+  .contact-channel{ display: flex; align-items: center; gap: 0.9rem; margin-top: 1.4rem; }
+  .contact-channel .icon-circle{
+    width: 44px; height: 44px; border-radius: 50%; background: var(--peach);
+    display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0;
+  }
+  .contact-channel a{ font-weight: 700; color: var(--pink-deep); }
+  .contact-channel span{ display: block; font-size: 0.8rem; color: #6B4433; font-weight: 500; }
+
+  .section-head{ max-width: 640px; margin: 0 auto 1rem; text-align: left; }
+  .section-head h2{ font-size: clamp(1.6rem, 4vw, 2.1rem); margin: 0.5rem 0 0.6rem; }
+
+  /* ---------- CONTACT FORM ---------- */
+  .contact-grid{ display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  @media (max-width: 760px){ .contact-grid{ grid-template-columns: 1fr; } }
+  .contact-form{ display: grid; gap: 1.1rem; max-width: 32rem; margin-top: 1.5rem; }
+  .contact-form label{ font-weight: 600; font-size: 0.9rem; margin-bottom: 0.35rem; display: block; }
+  .contact-form input, .contact-form textarea{
+    width: 100%; padding: 0.75rem 1rem; border: 2px solid #F4DCE4; border-radius: 10px;
+    font-family: 'Work Sans', sans-serif; font-size: 0.95rem;
+  }
+  .contact-form input:focus, .contact-form textarea:focus{ border-color: var(--pink-deep); }
+  .form-note{ font-size: 0.85rem; color: #6B4433; margin-top: -0.4rem; }
+
+  /* ---------- FOOTER ---------- */
+  footer{ background: var(--cocoa); color: #F5D8C9; padding: 2.5rem 5%; text-align: center; font-size: 0.9rem; }
+  footer .brand{ color: var(--white); }
+  footer .social{ display: flex; justify-content: center; gap: 1.4rem; margin: 1rem 0; font-weight: 600; }
+  footer .social a:hover{ color: var(--orange); }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="brand">Nakazi <span>Maria</span></div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME / HERO -->
+<section id="home" class="hero">
+  <div>
+    <span class="eyebrow">Nursery Teacher &amp; Writer</span>
+    <h1>Small hands, <span class="mark">big lessons</span>.</h1>
+    <p>I'm Maria — a nursery school teacher sharing what years in the classroom have taught me about raising, teaching, and understanding little ones.</p>
+    <div class="btn-row">
+      <a href="#blog" class="btn btn-primary">Read the blog</a>
+      <a href="#about" class="btn btn-ghost">My story</a>
+    </div>
+  </div>
+  <div class="hero-portrait"><img src="maria-photo.png" alt="Nakazi Maria with children in her nursery classroom"></div>
+</section>
+
+<!-- LATEST POSTS TEASER -->
+<section class="band band-peach">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Latest from the blog</span>
+      <h2>Notes from the classroom</h2>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Teaching Tips</span>
+        <h3>Five Ways to Calm a Morning Tantrum</h3>
+        <p>Drop-off tears are normal — here's what actually helps in the first five minutes.</p>
+        <a href="#post-1" class="read-more">Read post →</a>
+      </article>
+      <article class="card">
+        <span class="tag">For Parents</span>
+        <h3>What "Play" Is Really Teaching Your Child</h3>
+        <p>Every block tower and puddle jump is doing more than you think.</p>
+        <a href="#post-2" class="read-more">Read post →</a>
+      </article>
+      <article class="card">
+        <span class="tag">Behind the Scenes</span>
+        <h3>A Day in My Classroom</h3>
+        <p>From morning circle to home-time — what a real nursery day looks like.</p>
+        <a href="#post-3" class="read-more">Read post →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="band band-white">
+  <div class="wrap">
+    <span class="eyebrow">About me</span>
+    <h1 style="margin:0.6rem 0 1.4rem; font-size:clamp(2rem,5vw,2.8rem);">Hi, I'm Maria.</h1>
+    <p style="max-width:38rem; font-size:1.05rem; color:#6B4433;">I've spent years in nursery classrooms watching children take their very first steps toward reading, sharing, and understanding the world. This blog is where I write it all down — for parents, for fellow teachers, and for anyone who loves watching small people grow.</p>
+    <img src="maria-photo.png" alt="Nakazi Maria teaching a group of nursery children about getting dressed" style="width:100%; max-width:640px; border-radius:20px; margin-top:2rem; box-shadow:0 16px 32px -12px rgba(58,36,25,0.25);">
+  </div>
+</section>
+
+<section class="band band-orange">
+  <div class="wrap" style="display:grid; grid-template-columns: 1fr 1fr; gap:2.5rem; align-items:center;">
+    <div>
+      <h2>How I got here</h2>
+      <p style="color:#FFEBDA; margin-top:0.8rem;">I trained as an early childhood educator because I loved how honest young children are — with their feelings, their curiosity, and their questions. Every year in the classroom has taught me something new about patience and play.</p>
+    </div>
+    <div>
+      <h2>What I believe</h2>
+      <p style="color:#FFEBDA; margin-top:0.8rem;">Children don't need to be rushed to grow up. They need safe spaces, consistent routines, and adults who take their world seriously — even when it's made of blocks and crayons.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG (full list) -->
+<section id="blog" class="band band-peach">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The blog</span>
+      <h2>All posts</h2>
+    </div>
+    <div class="grid">
+
+      <article id="post-1" class="card">
+        <span class="tag">Teaching Tips</span>
+        <h3>Five Ways to Calm a Morning Tantrum</h3>
+        <p class="excerpt">Drop-off tears are normal. Here are the small, steady things that actually help in the first five minutes of the school day.</p>
+        <p class="full-text">Drop-off tears are normal, and they usually fade faster than parents expect. What helps most: a calm, predictable goodbye ritual; letting the child carry something familiar from home; naming the feeling out loud instead of rushing past it; giving a specific time they'll see their parent again ("after snack time"); and staying warm but brief at the door, since long goodbyes often stretch out the tears rather than ease them.</p>
+        <button class="read-more" onclick="togglePost(this)">Read post →</button>
+      </article>
+
+      <article id="post-2" class="card">
+        <span class="tag">For Parents</span>
+        <h3>What "Play" Is Really Teaching Your Child</h3>
+        <p class="excerpt">Every block tower, puddle jump, and pretend tea party is quietly building focus, language, and confidence.</p>
+        <p class="full-text">Every block tower, puddle jump, and pretend tea party is doing more work than it looks like. Stacking blocks builds fine motor control and early maths thinking. Pretend play builds vocabulary and turn-taking. Even "messy" outdoor play teaches balance and problem-solving. My rule in class: if a child is deeply focused, I don't interrupt — that focus is the actual lesson.</p>
+        <button class="read-more" onclick="togglePost(this)">Read post →</button>
+      </article>
+
+      <article id="post-3" class="card">
+        <span class="tag">Behind the Scenes</span>
+        <h3>A Day in My Classroom</h3>
+        <p class="excerpt">From morning circle to home-time — a real look at how a nursery day actually unfolds, mess and all.</p>
+        <p class="full-text">Mornings start with a circle: songs, a weather chat, and a look at what's planned for the day. Then we move into activity stations — building, drawing, sand and water play — before a snack break. Afternoons are quieter: storytime, rest, and free play. The "mess" in between is where most of the actual learning happens.</p>
+        <button class="read-more" onclick="togglePost(this)">Read post →</button>
+      </article>
+
+      <article id="post-4" class="card">
+        <span class="tag">Milestones</span>
+        <h3>When Should My Child Start Writing Their Name?</h3>
+        <p class="excerpt">There's no single right age — here's what I actually look for before introducing letters.</p>
+        <p class="full-text">There's no single right age for this. Before letters, I look for three things: can the child hold a crayon with some control, can they copy a simple shape like a circle or cross, and do they show interest on their own? Pushing letters too early, before the hand and interest are ready, usually creates frustration rather than progress.</p>
+        <button class="read-more" onclick="togglePost(this)">Read post →</button>
+      </article>
+
+      <article id="post-5" class="card">
+        <span class="tag">Reflections</span>
+        <h3>What Ten Years of Teaching Toddlers Taught Me</h3>
+        <p class="excerpt">Patience is a skill, not a personality trait. Here's how I built mine.</p>
+        <p class="full-text">Patience is a skill, not a personality trait — and I had to build mine on the job. The biggest shift for me was learning to slow down my own reactions before reacting to a child's. A tantrum, a spill, a refusal to nap: none of it is personal, and once I stopped treating it that way, the whole classroom felt calmer, including me.</p>
+        <button class="read-more" onclick="togglePost(this)">Read post →</button>
+      </article>
+
+      <article id="post-6" class="card">
+        <span class="tag">For Parents</span>
+        <h3>Making Bedtime Routines Actually Work</h3>
+        <p class="excerpt">The same consistency that works in my classroom can work at home too — with a few small changes.</p>
+        <p class="full-text">The same consistency that works in my classroom works at home too. Keep the order of steps identical every night — bath, story, lights out — so the child's body learns to expect sleep before you even say it's time. Avoid introducing anything new (a toy, a screen) in that last half hour, since novelty is the enemy of winding down.</p>
+        <button class="read-more" onclick="togglePost(this)">Read post →</button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY BAND -->
+<section class="band band-pink">
+  <div class="wrap" style="text-align:center;">
+    <span class="eyebrow" style="color:#FFE3EC;">My teaching philosophy</span>
+    <h2 style="margin:0.6rem 0 1rem;">Every child learns at their own pace — and that's exactly how it should be.</h2>
+    <p style="max-width:36rem; margin:0 auto 1.6rem; color:#FFE9EF;">I believe in patient, playful, and personal teaching. That's the spirit behind everything I write here.</p>
+    <a href="#contact" class="btn btn-outline">Get in touch</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="band band-white">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Get in touch</span>
+      <h1 style="margin:0.6rem 0 1rem; font-size:clamp(1.9rem,4.5vw,2.6rem);">Say hello</h1>
+      <p style="color:#6B4433; max-width:26rem;">Questions about the blog, collaboration ideas, or just want to share your own classroom story? I'd love to hear from you.</p>
+
+      <div class="contact-channel">
+        <span class="icon-circle">📞</span>
+        <div>
+          <span>Call</span>
+          <a href="tel:+256709031128">0709 031 128</a>
+        </div>
+      </div>
+
+      <div class="contact-channel">
+        <span class="icon-circle">💬</span>
+        <div>
+          <span>WhatsApp</span>
+          <a href="https://wa.me/256709031128" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <div style="margin-top:1.6rem;">
+        <p class="eyebrow" style="margin-bottom:0.6rem;">Find me online</p>
+        <div style="display:flex; gap:1.4rem; font-weight:600;">
+          <a href="#" style="color:var(--pink-deep);" onclick="event.preventDefault(); alert('Add your Instagram profile link here once it is ready.');">Instagram</a>
+          <a href="#" style="color:var(--pink-deep);" onclick="event.preventDefault(); alert('Add your Facebook page link here once it is ready.');">Facebook</a>
+          <a href="mailto:hello@nakazimaria.com" style="color:var(--pink-deep);">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <p class="form-note">Sending this opens WhatsApp with your message ready to send to Maria at 0709 031 128.</p>
+      <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer; justify-self:start;">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">Nakazi Maria</div>
+  <p style="margin:0.3rem 0;">📞 <a href="tel:+256709031128">0709 031 128</a> &nbsp;·&nbsp; <a href="https://wa.me/256709031128" target="_blank" rel="noopener">WhatsApp</a></p>
+  <div class="social">
+    <a href="#" onclick="event.preventDefault(); alert('Add your Instagram profile link here once it is ready.');">Instagram</a>
+    <a href="#" onclick="event.preventDefault(); alert('Add your Facebook page link here once it is ready.');">Facebook</a>
+    <a href="mailto:hello@nakazimaria.com">Email</a>
+  </div>
+  <p>&copy; 2026 Nakazi Maria. All rights reserved.</p>
+</footer>
+
+<script>
+  function togglePost(btn){
+    var card = btn.closest('.card');
+    var isOpen = card.classList.toggle('open');
+    btn.textContent = isOpen ? '← Show less' : 'Read post →';
+    if(isOpen){ card.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+  }
+
+  function sendToWhatsApp(event){
+    event.preventDefault();
+    var name = document.getElementById('name').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var message = document.getElementById('message').value.trim();
+    var text = "Hi Maria, I'm " + name + " (" + email + "). " + message;
+    var url = "https://wa.me/256709031128?text=" + encodeURIComponent(text);
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
